@@ -1,0 +1,65 @@
+.raffle {
+  padding: 11px 16px;
+  background-color: $blue;
+  &__title {  
+    @include font(26px,34px,300);
+  }
+  &__head {
+    @include font(22px,30px,300);
+  }
+  &__text {
+    border-top: 3px solid $white;
+    padding-top: 19px;
+    line-height: 18px;
+  }
+  &__paragraph {
+    line-height: 26px;
+    @include reset;
+  }
+  &__list {
+    padding: 0;
+  }
+  &__item {
+    position: relative;
+    padding-left: 30px;
+      &::before {
+        @include pseudo-element(14px,14px);
+        left: 10px;
+        top: 5px;
+        background: url(../img/mark.png) no-repeat;
+        background-color: #119ed9;
+        border-radius: 50%;
+      }
+      &:last-child {
+        display: none;
+      }
+  }
+  &__hidden {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .raffle {
+    &__title {
+      font-size: 43px;
+      line-height: 44px;
+    } 
+  }
+}
+
+@media (min-width: $desktop) {
+  .raffle {
+    padding: 0 33px;
+    padding-bottom: 18px;
+    &__title {
+      margin: 25px 0;
+    }
+    &__text {
+      line-height: 16px;
+    }
+    &__list {
+      margin: 0;
+    }
+  }
+}

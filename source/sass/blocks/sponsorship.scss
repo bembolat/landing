@@ -1,0 +1,78 @@
+.sponsorship {
+  border-bottom: 5px solid #129edb;
+  &__wrap {
+    position: relative;
+    width: 291px;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-bottom: 77px;
+      &::after {
+        @include pseudo-element (190px,75px);
+        background: url(../img/team.png) no-repeat;
+        background-size: contain;
+        bottom: -5px;
+        right: 50px;
+      }
+  }
+  &__league {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 234px;
+    margin: 0 auto;
+  }
+  &__label {
+    width: 36px;
+    height: 42px;
+  }
+  &__text {
+    width: 174px;
+    @include font(11px,15px,400);
+    color: $black;
+  }
+}
+
+@media (min-width: $tablet) {
+  .sponsorship {
+    &__wrap {
+    width: 591px;
+    padding-bottom: 0;
+      &::after {
+        right: 0;
+      }
+    }   
+    &__league {
+      margin: 0;
+      width: 360px;
+    }
+    &__label {
+      width: 53px;
+      height: 62px
+    }
+    &__text {
+      width: 265px;
+      @include font(16px,22px,400);
+    }
+}
+}
+
+@media (min-width: $desktop) {
+  .sponsorship {
+    &__wrap {
+      width: 907px;
+      padding-top: 67px;
+      &::after {
+        width: 250px;
+        height: 99px;
+      }
+    }
+    &__text {
+      width: 517px;
+      @include font(17px,20px,400);
+    }
+    &__league {
+      width: 593px;
+      padding-bottom: 10px;
+    }
+  }
+}

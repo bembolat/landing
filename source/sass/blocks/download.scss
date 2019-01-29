@@ -1,0 +1,106 @@
+.download {
+  padding-top: 40px;
+  padding-bottom: 55px;
+  background-color: $black;
+  &__wrap {
+    width: 291px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+  &__two {
+    display: none;
+  }
+  &__title {
+    @include font(30px,15px,300);
+  }
+  &__text {
+    @include font(18px,28px,300);
+  }
+  &__label {
+    margin-bottom: 10px;
+  }
+  &__links {
+    display: flex;
+    justify-content:space-around;
+  }
+  &__hand {
+    display: none;
+  }
+}
+@media (min-width: $tablet) {
+  .download {
+    &__wrap {
+      width: 591px;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &__title {
+      margin-top: 6px;
+      line-height: 38px;
+    }
+    &__text {
+    @include font(20px,30px,300);
+  }
+    &__links {
+      justify-content: flex-start;
+    }
+    &__links {
+      margin-top: 40px;
+    }
+    &__link {
+      margin-right: 23px;
+    }
+    &__label-image {
+      width: 104px;
+    }
+    &__information {
+      width: 468px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .download {
+    margin-top: 104px;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    &__wrap {
+      position: relative;
+      width: 960px;
+      max-width: 980px;
+      justify-content: flex-start;
+    }
+    &__label {
+      margin-right: 30px;
+    }
+    &__one {
+      display: none;
+    }
+    &__two {
+      display: block;
+    }
+    &__hand {
+      position: absolute;
+      display: block;
+      right: -10px;
+      top: -125px;
+    }
+    &__text {
+    @include font(18px,28px,300);
+  }
+  &__links {
+    justify-content: flex-end;
+  }
+  &__information {
+    width: 547px;
+  }
+  &__link:last-child {
+    margin-right: 60px;
+  }
+  }
+}

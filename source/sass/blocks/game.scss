@@ -1,0 +1,123 @@
+.game {
+  background-color: $black;
+  &__wrap {
+    background: url(../img/main-mobile.jpg) no-repeat;
+    background-size: cover;
+    color: $white;
+  }
+  &__logo {
+    margin-left: 16px;
+  }
+  &__logo-link {
+      display: block;
+      width: 178px;
+      height: 37px;
+    }
+  &__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0;
+    padding-bottom: 10px;
+  }
+  &__list {
+    display: none;
+  }
+  &__sponsor {
+    order: 1;
+  }
+  &__raffle {
+    margin-top: 30px;
+  }
+  &__sponsor {
+    position: relative;
+    width: 291px;
+    margin-left: 16px;
+    margin-top: 30px;
+    padding-left: 49px;
+      &::before {
+        @include pseudo-element(38px,46px);
+        left: 0;
+        top: 10px;
+        background: url(../img/label.png) no-repeat;
+        background-size: cover;
+      }
+  }
+  &__sponsor-text {
+        font-weight: 400;
+      }
+}
+
+@media (min-width: $tablet) {
+  .game {
+    &__wrap {
+      background-image: url(../img/main-tablet.jpg);
+    }
+    &__information {
+      max-width: 622px;
+      margin: 0 auto;
+    }
+    &__logo-link {
+      width: 238px;
+      height: 49px;
+    }
+    &__sponsor {
+      width: 506px;
+      margin: 36px auto 7px;
+      padding-left: 55px;
+        &::before {
+          top: -8px;
+          width: 44px;
+          height: 53px;
+        }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .game {
+    display: flex;
+    justify-content: space-between;
+    &__wrap {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-start;
+      background-image: url(../img/main-desktop.jpg);
+      background-size: cover;
+    }
+    &__logo {
+      margin-left: 0;
+    }
+    &__information {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 590px;
+      max-width: 622px;
+      margin-right: 0;
+      margin-left: 81px;
+    }
+    &__logo {
+      width: 248px;
+    }
+    &__sponsor {
+      order: 0;
+      max-width: 345px;
+      margin: 0;
+      &::before {
+          top: -1px;
+        }
+        &-text {
+          margin-top: 2px;
+          font-size: 19px;
+          line-height: 22px;
+          font-weight: 300;
+        }
+    }
+    &__list {
+        display: block;
+    }
+    &__raffle {
+      margin-top: 103px;
+    }
+  }
+}

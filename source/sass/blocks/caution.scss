@@ -1,0 +1,102 @@
+.caution {
+  background-color: $black;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    width: 291px;
+    margin: 0 auto;
+    padding: 22px 0;
+    color: $white;
+  }
+  &__title {
+    @include font(15px,11px,300);
+    text-align: center;
+  }
+  &__social {
+    order: -1;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text {
+    position: relative;
+    padding-left: 24px;
+    @include font(10px,11px,400);
+      &::before {
+        @include pseudo-element(17px,16px)
+        background: url(../img/icon-caution.png) no-repeat;
+        left: 0;
+      }
+  }
+  &__list {
+    padding: 0;
+  }
+  &__link {
+    display: block;
+      &:active {
+        opacity: .7;
+      }
+  }
+  &__image {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .caution {
+    &__wrap {
+      width: 622px;
+    }
+    &__title {
+    @include font(22px,16px,300);
+  }
+  &__image {
+    width: 46px;
+    height: 46px;
+  }
+  &__text {
+    padding-left: 32px;
+    @include font (13px,16px,400);
+    &::before {
+        width: 24px;
+        height: 23px;
+        top: 2px;
+      }
+  }
+  &__list {
+    margin-bottom: 24px;
+  }
+  }
+}
+
+@media (min-width: $desktop) {
+  .caution {
+    &__wrap {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 960px;
+    }
+    &__social {
+      order: 1;
+      width: 298px;
+    }
+    &__text {
+      width: 631px;
+    }
+    &__image {
+    width: 32px;
+    height: 32px;
+  }
+  &__title {
+    margin-top: 4px;
+  }
+  &__link {
+    opacity: .8;
+      &:hover {
+        opacity: 1;
+      }
+  }
+  }
+}

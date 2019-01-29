@@ -1,0 +1,42 @@
+.license {
+  background-color: #56595a;
+  &__wrap {
+    width: 291px;
+    margin: 0 auto;
+    padding: 20px 0 47px;
+    color: $white;
+    @include font(9px,11px,400);
+  }
+  &__logo {
+    width: 160px;
+    height: 34px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .license {
+    &__wrap {
+    width: 622px;
+    @include font(12px,16px,400);
+  }
+  &__logo {
+    width: 238px;
+    height: 49px;
+  }
+}
+}
+
+@media (min-width: $desktop) {
+  .license {
+    &__wrap {
+    width: 960px;
+    padding-top: 60px;
+    @include font(12px,16px,400);
+    column-count: 4;
+  }
+  &__logo {
+    width: 238px;
+    height: 49px;
+  }
+}
+}

@@ -1,0 +1,68 @@
+.account {
+  flex-direction: column;
+  padding: 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 105px;
+  max-width: 255px;
+  margin:  0 auto;
+  margin-top: 24px;
+  & a {
+    position: relative;
+    display: block;
+    padding-left: 24px;
+    color: $white;
+    @include font(14px,28px,300);
+    opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      &:active {
+        opacity: 7;
+      }
+      &::before {
+        display: block;
+        @include pseudo-element(20px,20px);
+        left: 0;
+        top: 2px;
+      }
+  }
+  &__web::before {
+    background: url(../img/icon-world.png) no-repeat;
+  }
+  &__register::before {
+    background: url(../img/icon-man.png) no-repeat;
+  }
+  &__login::before {
+    background: url(../img/icon-padlock.png) no-repeat;
+  }
+  &__register::after {
+    display: block;
+    @include pseudo-element(20px,20px);
+    right: 0px;
+    top: 2px;
+    background: url(../img/icon-flag.png) no-repeat;
+  }
+  &__item:not(:fist-child) {
+    margin-bottom: 7px;
+    margin-left: 26px;
+  }
+
+}
+
+@media (min-width: desktop) {
+  .account {
+    display: flex;
+  }
+}
+
+@media (min-width: 1370px) {
+  .account {
+    display: flex;
+    flex-direction: row;
+    width: 255px;
+      &__register::after {
+        right: -26px;
+  }
+  }
+}

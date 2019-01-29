@@ -1,0 +1,16 @@
+//Основные
+@import "normalize.scss";
+@import "mixins.scss";
+@import "variables.scss";
+@import "scaffolding.scss";
+
+//Блоки
+@import "blocks/game.scss";
+@import "blocks/raffle.scss";
+@import "blocks/singup.scss";
+@import "blocks/account.scss";
+@import "blocks/awards.scss";
+@import "blocks/caution.scss";
+@import "blocks/download.scss";
+@import "blocks/sponsorship.scss";
+@import "blocks/license.scss";
